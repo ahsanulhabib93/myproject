@@ -1,10 +1,11 @@
 name: CI Pipeline for Calculator App
 
 on: 
+  workflow_dispatch:
   push:
-    branches: [ main ]
+    branches: [ master ]
   pull_request:
-    branches: [ main ]
+    types: [opened, reopened]
 
 jobs:
   test:
